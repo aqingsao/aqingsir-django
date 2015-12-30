@@ -10,7 +10,7 @@ def home(request):
 
 def detail(request, id):
     try:
-        post = Article.objects.get(id=str(id))
+        post = Article.objects.get(pk=id)
     except Article.DoesNotExist:
         raise Http404
     return render(request, 'articles/post.html', {'post' : post})
