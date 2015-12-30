@@ -1,4 +1,5 @@
 {% extends "articles/base.html" %}
+{% load markdown_filter %}
 
 {% block content %}
 <div class="posts">
@@ -13,10 +14,9 @@
 
             <div class="post-description">
                 <p>
-                    {{ post.content }}
+                    {{ post.content | markdown_filter}}
                 </p>
             </div>
-          {% include "articles/duoshuo.html" %}
         </section>
 </div><!-- /.blog-post -->
 {% endblock %}
