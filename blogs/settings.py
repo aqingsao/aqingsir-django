@@ -38,13 +38,22 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'disqus',
     'articles'
 )
+
+
+# For bootstrap-admin
 from django.conf import global_settings
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
 )
 BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
+
+
+# For disqus
+DISQUS_API_KEY = 'FOOBARFOOBARFOOBARFOOBARFOOBARF'
+DISQUS_WEBSITE_SHORTNAME = 'foobar'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

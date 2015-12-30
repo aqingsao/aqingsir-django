@@ -11,11 +11,12 @@
                     </p>
             </header>
 
-                <div class="post-description">
-                    <p>
-                        {{ post.content }}
-                    </p>
-                </div>
+            <div class="post-description">
+                <p>
+                    {{ post.content }}
+                </p>
+            </div>
+          {% include "articles/duoshuo.html" %}
         </section>
 </div><!-- /.blog-post -->
 {% endblock %}
