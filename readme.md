@@ -1,4 +1,4 @@
-# install process
+# installation
 1. 
 sudo pip install django-disqus
 sudo pip install pygments
