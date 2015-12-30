@@ -1,4 +1,6 @@
 <!doctype html>
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -22,25 +24,12 @@
                         <a class="button-success pure-button" href="/">主页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="button-success pure-button" href="/">归档</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="pure-button" href="https://github.com/Andrew-liu/my_blog_tutorial">Github</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-error pure-button" href="http://weibo.com/dinosaurliu">Weibo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="/">专题</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="button-success pure-button" href="/">About Me</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
-
 
     <div class="content pure-u-1 pure-u-md-3-4">
         <div>
@@ -49,9 +38,8 @@
             <div class="footer">
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                        <li><a href="http://andrewliu.tk/about/">About Me</a></li>
-                        <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
-                        <li><a href="http://github.com/yahoo/pure/">GitHub</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="http://how2read.me">程序员最容易读错的单词</a></li>
                     </ul>
                 </div>
             </div>
@@ -59,5 +47,6 @@
     </div>
 </div>
 
+<script type="text/javascript" src="{% static "articles/js/baidu.js" %}"></script>
 </body>
 </html>

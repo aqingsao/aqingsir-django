@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'bootstrap_admin',
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,14 +41,12 @@ INSTALLED_APPS = (
     'articles'
 )
 
+# for django-suit, http://django-suit.readthedocs.org/en/develop/
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
-# For bootstrap-admin
-from django.conf import global_settings
-TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
-BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
-
 
 # For disqus
 DISQUS_API_KEY = 'FOOBARFOOBARFOOBARFOOBARFOOBARF'
