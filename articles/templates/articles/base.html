@@ -9,44 +9,22 @@
   <title>Aqing Sir Blog</title>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-  <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
+  <link rel="stylesheet" href='{% static "articles/css/app.css"%}'>
   <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
 </head>
 <body>
-<div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-md-1-4">
-        <div class="header">
-            <h1 class="brand-title"><a href="{% url 'articles:home' %}">Aqing Sir's Blog</a></h1>
-            <h2 class="brand-tagline">aqingsir</h2>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="/">主页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="/">About Me</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div id="footer">
+    <div>
+      <ul>
+        <li><a href="#">aqingsir的博客</a></li>
+        <li><a href="http://how2read.me">程序员最容易读错的单词</a></li>
+      </ul>
     </div>
-
-    <div class="content pure-u-1 pure-u-md-3-4">
-        <div>
-            {% block content %}
-            {% endblock %}
-            <div class="footer">
-                <div class="pure-menu pure-menu-horizontal pure-menu-open">
-                    <ul>
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="http://how2read.me">程序员最容易读错的单词</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript" src="{% static "articles/js/baidu.js" %}"></script>
+  </div>
+  <script type="text/javascript" src="{% static "articles/js/baidu.js" %}"></script>
 </body>
 </html>

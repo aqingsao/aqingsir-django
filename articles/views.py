@@ -5,8 +5,8 @@ from django.http import HttpResponse
 from .models import *
 
 def home(request):
-    post_list = Article.objects.all()
-    return render(request, 'articles/home.html', {'post_list' : post_list})
+    posts = Article.objects.all()
+    return render(request, 'articles/home.html', {'posts' : posts})
 
 def detail(request, id):
     try:
